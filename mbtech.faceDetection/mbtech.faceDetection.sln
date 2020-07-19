@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mbtech.faceDetection", "mbtech.faceDetection.csproj", "{32068033-085C-4BFF-B4B1-A720F7DAD5D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mbtech.faceDetection.core", "..\mbtech.faceDetection.core\mbtech.faceDetection.core.csproj", "{54111BF1-80F2-4298-97BD-247CA569D80D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32068033-085C-4BFF-B4B1-A720F7DAD5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32068033-085C-4BFF-B4B1-A720F7DAD5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32068033-085C-4BFF-B4B1-A720F7DAD5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32068033-085C-4BFF-B4B1-A720F7DAD5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54111BF1-80F2-4298-97BD-247CA569D80D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54111BF1-80F2-4298-97BD-247CA569D80D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54111BF1-80F2-4298-97BD-247CA569D80D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54111BF1-80F2-4298-97BD-247CA569D80D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C2ECEC0-A7C3-4905-96C1-ED99D496AC8F}
+	EndGlobalSection
+EndGlobal

@@ -52,19 +52,19 @@
             // progressB
             // 
             this.progressB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.progressB.Location = new System.Drawing.Point(2, 569);
-            this.progressB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressB.Location = new System.Drawing.Point(3, 698);
+            this.progressB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressB.Name = "progressB";
-            this.progressB.Size = new System.Drawing.Size(502, 20);
+            this.progressB.Size = new System.Drawing.Size(668, 25);
             this.progressB.TabIndex = 3;
             // 
             // btnStart
             // 
             this.btnStart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStart.Location = new System.Drawing.Point(580, 569);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStart.Location = new System.Drawing.Point(773, 698);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(68, 20);
+            this.btnStart.Size = new System.Drawing.Size(90, 25);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -73,10 +73,10 @@
             // btnCancel
             // 
             this.btnCancel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCancel.Location = new System.Drawing.Point(508, 569);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Location = new System.Drawing.Point(677, 698);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(68, 20);
+            this.btnCancel.Size = new System.Drawing.Size(90, 25);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -85,10 +85,10 @@
             // btnStartPreview
             // 
             this.btnStartPreview.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStartPreview.Location = new System.Drawing.Point(652, 569);
-            this.btnStartPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStartPreview.Location = new System.Drawing.Point(869, 698);
+            this.btnStartPreview.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStartPreview.Name = "btnStartPreview";
-            this.btnStartPreview.Size = new System.Drawing.Size(69, 20);
+            this.btnStartPreview.Size = new System.Drawing.Size(92, 25);
             this.btnStartPreview.TabIndex = 0;
             this.btnStartPreview.Text = "Preview";
             this.btnStartPreview.UseVisualStyleBackColor = true;
@@ -98,19 +98,19 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtDirectory, 3);
             this.txtDirectory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtDirectory.Location = new System.Drawing.Point(2, 2);
-            this.txtDirectory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDirectory.Location = new System.Drawing.Point(3, 2);
+            this.txtDirectory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDirectory.Name = "txtDirectory";
-            this.txtDirectory.Size = new System.Drawing.Size(646, 20);
+            this.txtDirectory.Size = new System.Drawing.Size(860, 22);
             this.txtDirectory.TabIndex = 1;
             // 
             // btnOpen
             // 
             this.btnOpen.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOpen.Location = new System.Drawing.Point(652, 2);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpen.Location = new System.Drawing.Point(869, 2);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(69, 24);
+            this.btnOpen.Size = new System.Drawing.Size(92, 30);
             this.btnOpen.TabIndex = 0;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
@@ -123,10 +123,11 @@
             this.lbConsole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbConsole.ForeColor = System.Drawing.Color.Lime;
             this.lbConsole.FormattingEnabled = true;
-            this.lbConsole.Location = new System.Drawing.Point(2, 35);
-            this.lbConsole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbConsole.ItemHeight = 16;
+            this.lbConsole.Location = new System.Drawing.Point(3, 42);
+            this.lbConsole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbConsole.Name = "lbConsole";
-            this.lbConsole.Size = new System.Drawing.Size(719, 530);
+            this.lbConsole.Size = new System.Drawing.Size(958, 652);
             this.lbConsole.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -145,30 +146,31 @@
             this.tableLayoutPanel1.Controls.Add(this.progressB, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(723, 600);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(964, 738);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(723, 600);
+            this.ClientSize = new System.Drawing.Size(964, 738);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MBTECH | FACE DETECTION";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

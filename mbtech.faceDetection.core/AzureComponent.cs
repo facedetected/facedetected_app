@@ -20,6 +20,15 @@ namespace mbtech.faceDetection.core
 
         static readonly string uriBase =
             Convert.ToString(ConfigurationManager.AppSettings["uriBase"]);
+
+        public AzureComponent() 
+        {
+            if (subscriptionKey == null)
+                throw new Exception("Error al inicializar: subscriptionKey.");
+
+            if (uriBase == null)
+                throw new Exception("Error al inicializar: uriBase.");
+        }
         public Response ProcessImage(string file) 
         {
             var result = new Response();

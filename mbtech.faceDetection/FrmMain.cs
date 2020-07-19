@@ -21,9 +21,20 @@ namespace mbtech.faceDetection
         PictureBox picture = new PictureBox();
         static readonly string detectedType = Convert.ToString(ConfigurationManager.AppSettings["detectedType"]);
 
+        string[] extensiones = new string[] { ".jfif", ".jpeg", ".png", ".gif", ".bmp" };
         public FrmMain()
         {
             InitializeComponent();
+           
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            string extensions = ConfigurationManager.AppSettings["extensions"];
+            if (extensions == null)
+                throw new Exception("Error al inicializar: extensiones.");
+
+            extensiones = Convert.ToString(extensions).Split('|');
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -47,7 +58,12 @@ namespace mbtech.faceDetection
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            string[] files = Directory.GetFiles(txtDirectory.Text);
+            var directory = txtDirectory.Text;
+            if (!Directory.Exists(directory))
+                return;
+
+            string[] files = Directory.EnumerateFiles(directory, "*.*", SearchOption.AllDirectories)
+  .Where(s => extensiones.Contains(new FileInfo(s).Extension)).ToArray();
 
             List<object> arguments = new List<object>();
             arguments.Add(1);
@@ -183,11 +199,26 @@ namespace mbtech.faceDetection
 
         private void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            string tempPath = Path.GetTempPath();
+            string newPath = Path.Combine(tempPath, string.Format("{0}.txt", Guid.NewGuid()));        
 
+
+            StreamWriter sw = new StreamWriter(newPath);
+            foreach (object lista in lbConsole.Items)
+            {
+                sw.WriteLine(lista.ToString());
+            }
+            sw.Close();
+
+            System.Diagnostics.Process.Start(newPath);
         }
 
         private void btnStartPreview_Click(object sender, EventArgs e)
         {
+            var directory = txtDirectory.Text;
+            if (!Directory.Exists(directory))
+                return;
+
             tableLayoutPanel1.Controls.Remove(this.lbConsole);
             picture.Dock = System.Windows.Forms.DockStyle.Fill;
             picture.TabIndex = 5;
@@ -197,13 +228,15 @@ namespace mbtech.faceDetection
             picture.TabStop = false;
             tableLayoutPanel1.SetColumnSpan(picture, 4);
             tableLayoutPanel1.Controls.Add(picture, 0, 1);
-
-            string[] files = Directory.GetFiles(txtDirectory.Text);
+            string[] files = Directory.EnumerateFiles(txtDirectory.Text, "*.*", SearchOption.AllDirectories)
+            .Where(s => extensiones.Contains(new FileInfo(s).Extension)).ToArray();
             List<object> arguments = new List<object>();
             arguments.Add(2);
             arguments.Add(files);
             if (!worker.IsBusy)
                 worker.RunWorkerAsync(argument: arguments);
         }
+
+     
     }
 }
